@@ -1,0 +1,23 @@
+body {
+    background-color: rgb(88, 250, 196);
+}
+
+.oculto {
+    display: none;
+}
+
+.detalles {
+    background: rgb(33, 92, 255);
+    border-left: 12px 16px;
+    margin: 12px 16px 1;
+    border-radius: 10px;
+}
+
+.imagen-clic {
+    cursor: pointer;
+    transition: transform 0.8s;
+}
+
+.imagen-clic:hover {
+    transform: scale(1.03);
+}
