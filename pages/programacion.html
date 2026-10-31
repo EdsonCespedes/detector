@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programación - Nos Gusta La Ciencia</title>
+    <!-- Nota: Subimos un nivel de carpeta con ../ para encontrar la carpeta css -->
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+    <!-- MENÚ SUPERIOR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <ul class="nav-links">
+                <!-- Volver al Inicio -->
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="biologia.html">Biología</a></li>
+                <li><a href="robotica.html">Robótica</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+
+        <!-- CABECERA DE LA PÁGINA: LOGO A LA IZQUIERDA Y TÍTULO A LA DERECHA -->
+        <header class="course-header">
+            <div class="course-header-logo">
+                <img src="../images/black_cat.jpg" alt="Logo Programación">
+            </div>
+            <div class="course-header-title">
+                <h1>Curso de Programación</h1>
+                <p>Domina los fundamentos del código y crea tus propias aplicaciones.</p>
+            </div>
+        </header>
+
+        <!-- SECCIÓN DE DOS CARDS LADO A LADO -->
+        <section class="course-grid">
+
+            <!-- CARD 1: TEMARIO (Izquierda) -->
+            <article class="course-card">
+                <h2 class="card-header-title">Temario del Curso</h2>
+                <div class="card-body">
+                    <ul class="temario-list">
+                        <li><strong>Módulo 1:</strong> Introducción a la Lógica y Algoritmos.</li>
+                        <li><strong>Módulo 2:</strong> HTML5 & CSS3 - Estructura y Estilos Web.</li>
+                        <li><strong>Módulo 3:</strong> JavaScript Vanilla - Interactividad y Eventos.</li>
+                        <li><strong>Módulo 4:</strong> Manipulación del DOM y Proyectos Prácticos.</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- CARD 2: POSTULACIÓN (Derecha) -->
+            <article class="course-card postulacion-card">
+                <h2 class="card-header-title">Postular al Curso</h2>
+                <div class="card-body">
+                    <p class="postulacion-info">
+                        Inscríbete para formar parte de la siguiente cohorte. Completa tus datos a continuación:
+                    </p>
+                    
+                    <!-- Formulario de postulación -->
+                    <form class="postulacion-form" id="form-postulacion">
+                        <div class="form-group">
+                            <label for="nombre">Nombre Completo:</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Correo Electrónico:</label>
+                            <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+                        </div>
+
+                        <button type="submit" class="btn-postular">Enviar Postulación</button>
+                    </form>
+                </div>
+            </article>
+
+        </section>
+
+    </main>
+
+    <!-- JS Vanilla cargado desde la subcarpeta -->
+    <script src="../js/main.js"></script>
+</body>
+</html>

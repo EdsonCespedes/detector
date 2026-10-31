@@ -1,23 +1,311 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background-color: rgb(88, 250, 196);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333333;
+    background-color: #f4f7f6;
 }
 
-.oculto {
-    display: none;
+.navbar {
+    background-color: rgba(20, 30, 45, 0.9); /* Fondo semi-transparente oscuro */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 15px 40px;
 }
 
-.detalles {
-    background: rgb(33, 92, 255);
-    border-left: 12px 16px;
-    margin: 12px 16px 1;
-    border-radius: 10px;
+.nav-container {
+    display: flex;
+    justify-content: flex-end; /* Alinea las opciones a la DERECHA */
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.imagen-clic {
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px; /* Espaciado uniforme entre opciones del menú */
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none; /* Quita el subrayado predeterminado */
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #00bcd4; 
+}
+
+.hero-banner {
+    width: 100%;
+    min-height: 280px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/fondo_NGC.jpg');
+    background-size: cover;        
+    background-position: center;   
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;       /* Centra horizontalmente el logo */
+    align-items: center;           /* Centra verticalmente el logo */
+    padding: 40px 20px;
+}
+
+.hero-logo {
+    max-width: 180px;
+    height: auto;
+    border-radius: 50%;           /* Hace circular la imagen si es cuadrada */
+    border: 4px solid #ffffff;     /* Borde blanco elegante alrededor del logo */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+
+/* ===================================================
+   4. SECCIÓN PRINCIPAL Y PROPÓSITO
+   =================================================== */
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.proposito-section {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.proposito-section h2 {
+    font-size: 2.2rem;
+    color: #1a252f;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+/* Línea decorativa debajo de "Propósito" */
+.proposito-section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #00bcd4;
+    margin: 8px auto 0 auto;
+    border-radius: 2px;
+}
+
+.proposito-leyenda {
+    font-size: 1.15rem;
+    color: #555555;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+/* ===================================================
+   5. SECCIÓN DE CARDS (CONTENEDORES INTERACTIVOS)
+   =================================================== */
+.cards-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+/* Convertimos toda la card en un enlace clickeable */
+.card {
+    display: block;
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;             /* Recorta la imagen para respetar las esquinas redondeadas */
+    text-decoration: none;       /* Desactiva subrayado de texto de enlace */
+    color: inherit;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto al pasar el cursor sobre la card (Hover) */
+.card:hover {
+    transform: translateY(-8px);  /* Eleva la tarjeta 8 píxeles */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.18);
+}
+
+.card-image-wrapper {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+}
+
+.card-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;            /* Ajusta la imagen sin deformarla */
+    transition: transform 0.4s ease;
+}
+
+/* Amplía levemente la imagen al hacer hover sobre la card */
+.card:hover .card-image-wrapper img {
+    transform: scale(1.05);
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    font-size: 1.4rem;
+    color: #1a252f;
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    font-size: 0.95rem;
+    color: #666666;
+}
+/* ===================================================
+   6. CABECERA DE CURSO (LOGO IZQ - TÍTULO DER)
+   =================================================== */
+.course-header {
+    display: flex;
+    align-items: center;          /* Centra verticalmente logo y título */
+    gap: 25px;                    /* Espacio entre el logo y el título */
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+}
+
+.course-header-logo img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;           /* Hace la imagen redonda */
+    object-fit: cover;
+    border: 3px solid #00bcd4;
+}
+
+.course-header-title {
+    text-align: left;             /* Alinea el texto a la derecha visualmente respecto al logo */
+}
+
+.course-header-title h1 {
+    font-size: 2.2rem;
+    color: #1a252f;
+    margin-bottom: 5px;
+}
+
+.course-header-title p {
+    font-size: 1.05rem;
+    color: #666666;
+}
+
+/* ===================================================
+   7. DISPOSICIÓN LADO A LADO (2 CARDS)
+   =================================================== */
+.course-grid {
+    display: grid;
+    /* Divide la pantalla en 2 columnas de igual tamaño */
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.course-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+}
+
+.card-header-title {
+    font-size: 1.5rem;
+    color: #1a252f;
+    border-bottom: 2px solid #00bcd4;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Lista del Temario */
+.temario-list {
+    list-style: none;
+}
+
+.temario-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eeeeee;
+    font-size: 0.98rem;
+    color: #444444;
+}
+
+.temario-list li:last-child {
+    border-bottom: none;
+}
+
+/* Formulario de Postulación */
+.postulacion-info {
+    margin-bottom: 15px;
+    color: #555555;
+    font-size: 0.95rem;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #333333;
+    font-size: 0.9rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: #00bcd4;
+}
+
+.btn-postular {
+    width: 100%;
+    background-color: #00bcd4;
+    color: #ffffff;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
     cursor: pointer;
-    transition: transform 0.8s;
+    transition: background-color 0.3s ease;
 }
 
-.imagen-clic:hover {
-    transform: scale(1.03);
+.btn-postular:hover {
+    background-color: #008ba3;
+}
+
+/* Adaptabilidad a pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    .course-grid {
+        grid-template-columns: 1fr; /* Pasa a 1 columna en celulares */
+    }
+    
+    .course-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .course-header-title {
+        text-align: center;
+    }
 }

@@ -1,24 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detector</title>
+    <title>Nos Gusta La Ciencia</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    
-    <h1>Detector</h1>
 
-    <div class="tarjeta-alumno">
-        <img src="images/black_cat.jpg" alt="Aqui deberia estar un alumno">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNh9wholSTiPzqIh7hj7R54tKswTMZxNQPxhm_I2qE8dsA-7WD6bRzZCJV&s=10" alt="Aqui deberia estar un alumno">
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <!-- Menú de 3 opciones -->
+                <ul class="nav-links">
+                    <li><a href="pages/historia.html">historia</a></li>
+                    <li><a href="pages/integrantes.html">integrantes</a></li>
+                    <li><a href="pages/contactanos.html">contactanos</a></li>
+                </ul>
+            </div>
+        </nav>
 
-    </div>
+        <div class="hero-banner">
+            <img src="images/logo_NGC.jpg" alt="Logo Nos Gusta La Ciencia" class="hero-logo">
+        </div>
+    </header>
 
-    <nav>
-        <a href="pages/alumnos.html"> Ver Alumnos</a>
-    </nav>
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="container">
 
+        <section class="proposito-section">
+            <h2>Propósito</h2>
+            <p class="proposito-leyenda">
+                Fomentar el interés científico y tecnológico a través del aprendizaje práctico, 
+                la exploración interactiva y la formación de mentes curiosas para el futuro.
+            </p>
+        </section>
+
+        <section class="cards-section">
+            
+            <!-- CARD 1: Programación -->
+            <a href="pages/programacion.html" class="card">
+                <div class="card-image-wrapper">
+                    <img src="images/cat.jpg" alt="Sección Programación">
+                </div>
+                <div class="card-content">
+                    <h3>Programación</h3>
+                    <p>Aprende las bases de la lógica, algoritmos y desarrollo de software desde cero.</p>
+                </div>
+            </a>
+
+            <!-- CARD 2: Biología -->
+            <a href="pages/biologia.html" class="card">
+                <div class="card-image-wrapper">
+                    <img src="images/bio_NGC.jpg" alt="Sección Biología">
+                </div>
+                <div class="card-content">
+                    <h3>Biología</h3>
+                    <p>Explora la vida en todas sus dimensiones, desde células hasta ecosistemas completos.</p>
+                </div>
+            </a>
+
+            <!-- CARD 3: Robótica -->
+            <a href="pages/robotica.html" class="card">
+                <div class="card-image-wrapper">
+                    <img src="images/cat.jpg" alt="Sección Robótica">
+                </div>
+                <div class="card-content">
+                    <h3>Robótica</h3>
+                    <p>Construye y programa circuitos, sensores y sistemas mecánicos automatizados.</p>
+                </div>
+            </a>
+
+        </section>
+
+    </main>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
