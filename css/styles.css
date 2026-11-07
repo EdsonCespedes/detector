@@ -7,12 +7,12 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    color: #333333;
-    background-color: #f4f7f6;
+    color: #7ab6aa;
+    background-color:#c0c497 ;
 }
 
 .navbar {
-    background-color: rgba(20, 30, 45, 0.9); /* Fondo semi-transparente oscuro */
+    background-color:#7ab6aa(20, 30, 45, 0.9); /* Fondo semi-transparente oscuro */
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -307,5 +307,307 @@ body {
     
     .course-header-title {
         text-align: center;
+    }
+}
+/* ===================================================
+   8. SECCIÓN Y CARD DE CONTACTO
+   =================================================== */
+.contacto-section {
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+.contacto-card {
+    background-color:#7ab6aa ;
+    border-radius: 12px;
+    padding: 35px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.contacto-card h2 {
+    font-size: 1.8rem;
+    color: #1a252f;
+    margin-bottom: 10px;
+}
+
+.contacto-card p {
+    color: #666666;
+    margin-bottom: 25px;
+    font-size: 1rem;
+}
+
+/* Contenedor de los enlaces de contacto */
+.contacto-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Se acomodan bien en pantallas pequeñas */
+}
+
+/* Estilo individual para cada enlace */
+.contacto-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.contacto-item:hover {
+    transform: translateY(-3px);
+    opacity: 0.9;
+}
+
+/* Colores institucionales para cada red social */
+.contacto-item.instagram {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}
+
+.contacto-item.facebook {
+    background-color: #1877f2;
+
+
+}
+
+.contacto-item.email {
+    background-color: #cfc483;
+}
+
+/* Adaptabilidad a dispositivos móviles */
+@media (max-width: 600px) {
+    .contacto-links {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+.face{
+    width: 50px;
+}
+.ig{
+    width: 50px;
+}
+.gmail{
+    width: 50px;
+}
+/* ===================================================
+   9. SECCIÓN DE HISTORIA E INFORMACIÓN INSTITUCIONAL
+   =================================================== */
+.historia-narrativa {
+    margin: 50px auto;
+    max-width: 1000px;
+}
+
+.historia-narrativa h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #1a252f;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.historia-narrativa h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #00bcd4;
+    margin: 8px auto 0 auto;
+    border-radius: 2px;
+}
+
+/* Filas individuales de texto e imagen */
+.historia-row {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 35px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Alterna la posición: imagen a la izquierda y texto a la derecha */
+.historia-row.reverse {
+    flex-direction: row-reverse;
+}
+
+.historia-text {
+    flex: 1;
+}
+
+.historia-text h3 {
+    font-size: 1.35rem;
+    color: #1a252f;
+    margin-bottom: 12px;
+    border-left: 4px solid #00bcd4;
+    padding-left: 10px;
+}
+
+.historia-text p {
+    color: #555555;
+    font-size: 1rem;
+    line-height: 1.6;
+    font-style: italic; /* Indica que el contenido es personalizable */
+}
+
+.historia-img {
+    flex: 1;
+    max-width: 380px;
+}
+
+.historia-img img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Fila final para apoyos y subvenciones */
+.historia-row-extra {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.historia-item-text h3 {
+    font-size: 1.3rem;
+    color: #1a252f;
+    margin-bottom: 10px;
+    border-left: 4px solid #00bcd4;
+    padding-left: 10px;
+}
+
+.historia-item-text.subvencion h3 {
+    border-left-color: #27ae60; /* Color verde institucional para subvenciones */
+}
+
+.historia-item-text p {
+    color: #555555;
+    font-size: 0.95rem;
+    font-style: italic;
+}
+
+/* Diseño responsivo para pantallas móviles */
+@media (max-width: 768px) {
+    .historia-row, .historia-row.reverse {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+    
+    .historia-img {
+        max-width: 100%;
+        width: 100%;
+    }
+    
+    .historia-row-extra {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+}
+/* ===================================================
+   11. SECCIÓN DE INTEGRANTES (ALTERNANCIA DE POSICIÓN)
+   =================================================== */
+.integrantes-section {
+    margin: 50px auto;
+    max-width: 1000px;
+}
+
+.integrantes-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #1a252f;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.integrantes-section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #00bcd4;
+    margin: 8px auto 0 auto;
+    border-radius: 2px;
+}
+
+/* Fila base: Imagen izquierda, Texto derecha */
+.integrante-row {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    margin-bottom: 30px;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+}
+
+.integrante-row:hover {
+    transform: translateY(-3px);
+}
+
+/* CLASE INVERTIDA: Cambia el orden, colocando la imagen a la derecha y texto a la izquierda */
+.integrante-row.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Contenedor de la imagen de perfil */
+.integrante-img {
+    flex: 0 0 160px; /* Ancho fijo para mantener la proporción de la foto */
+    height: 160px;
+}
+
+.integrante-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;          /* Hace la foto circular */
+    border: 4px solid #00bcd4;   /* Borde institucional */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenedor de la información del integrante */
+.integrante-info {
+    flex: 1;
+}
+
+.integrante-info h3 {
+    font-size: 1.35rem;
+    color: #1a252f;
+    margin-bottom: 8px;
+}
+
+.integrante-info p {
+    color: #555555;
+    font-size: 0.95rem;
+    margin-bottom: 6px;
+    line-height: 1.5;
+}
+
+/* Adaptabilidad a dispositivos móviles */
+@media (max-width: 768px) {
+    .integrante-row, .integrante-row.reverse {
+        flex-direction: column; /* En celulares se apilan verticalmente */
+        text-align: center;
+        padding: 20px;
+    }
+
+    .integrante-img {
+        margin: 0 auto 15px auto;
     }
 }
