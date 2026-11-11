@@ -458,9 +458,9 @@ body {
     font-style: italic; /* Indica que el contenido es personalizable */
 }
 
-.historia-img {
-    flex: 1;
+.historia-img {flex: 1;
     max-width: 380px;
+    
 }
 
 .historia-img img {
@@ -517,6 +517,8 @@ body {
         grid-template-columns: 1fr;
         padding: 20px;
     }
+
+
 }
 /* ===================================================
    11. SECCIÓN DE INTEGRANTES (ALTERNANCIA DE POSICIÓN)
@@ -610,4 +612,15 @@ body {
     .integrante-img {
         margin: 0 auto 15px auto;
     }
+}
+.unicef{
+    width: 1px;
+    height: 1spx;
+    border-radius: 5%;
+
+}
+.cbasc{
+    width: 10px;
+    height: 10px;
+    border-radius: 5%;
 }
