@@ -1,3 +1,6 @@
+/* ===================================================
+   1. RESET BÁSICO Y VARIABLES DE ESTILO
+   =================================================== */
 * {
     margin: 0;
     padding: 0;
@@ -7,21 +10,25 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    color: #7ab6aa;
-    background-color:#c0c497 ;
+    color: #333333;
+    background-color: #d9e1a5; /* Color principal de fondo institucional */
 }
 
+/* ===================================================
+   2. NAVEGACIÓN SUPERIOR DERECHA
+   =================================================== */
 .navbar {
-    background-color:#7ab6aa(20, 30, 45, 0.9); /* Fondo semi-transparente oscuro */
+    background-color: #6aa79f; /* Color institucional */
     position: sticky;
     top: 0;
     z-index: 1000;
     padding: 15px 40px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .nav-container {
     display: flex;
-    justify-content: flex-end; /* Alinea las opciones a la DERECHA */
+    justify-content: flex-end;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -29,39 +36,42 @@ body {
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 25px; /* Espaciado uniforme entre opciones del menú */
+    gap: 25px;
 }
 
 .nav-links a {
-    color: #ffffff;
-    text-decoration: none; /* Quita el subrayado predeterminado */
+    color: #d9e1a5;
+    text-decoration: none;
     font-weight: 600;
     font-size: 1rem;
     transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: #00bcd4; 
+    color: #d9e1a5; 
 }
 
+/* ===================================================
+   3. HERO BANNER
+   =================================================== */
 .hero-banner {
     width: 100%;
     min-height: 280px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/fondo_NGC.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/fondo_NGC.jpg');
     background-size: cover;        
     background-position: center;   
     background-repeat: no-repeat;
     display: flex;
-    justify-content: center;       /* Centra horizontalmente el logo */
-    align-items: center;           /* Centra verticalmente el logo */
+    justify-content: center;       
+    align-items: center;           
     padding: 40px 20px;
 }
 
 .hero-logo {
     max-width: 180px;
     height: auto;
-    border-radius: 50%;           /* Hace circular la imagen si es cuadrada */
-    border: 4px solid #ffffff;     /* Borde blanco elegante alrededor del logo */
+    border-radius: 50%;           
+    border: 4px solid #ffffff;     
     box-shadow: 0 4px 15px rgba(0,0,0,0.4);
 }
 
@@ -77,23 +87,26 @@ body {
 .proposito-section {
     text-align: center;
     margin-bottom: 50px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .proposito-section h2 {
     font-size: 2.2rem;
-    color: #1a252f;
+    color: #2c3e50;
     margin-bottom: 15px;
     position: relative;
     display: inline-block;
 }
 
-/* Línea decorativa debajo de "Propósito" */
 .proposito-section h2::after {
     content: '';
     display: block;
     width: 60px;
     height: 4px;
-    background-color: #00bcd4;
+    background-color: #6aa79f; /* Acento con tu color */
     margin: 8px auto 0 auto;
     border-radius: 2px;
 }
@@ -114,21 +127,19 @@ body {
     gap: 30px;
 }
 
-/* Convertimos toda la card en un enlace clickeable */
 .card {
     display: block;
     background-color: #ffffff;
     border-radius: 12px;
-    overflow: hidden;             /* Recorta la imagen para respetar las esquinas redondeadas */
-    text-decoration: none;       /* Desactiva subrayado de texto de enlace */
+    overflow: hidden;            
+    text-decoration: none;      
     color: inherit;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Efecto al pasar el cursor sobre la card (Hover) */
 .card:hover {
-    transform: translateY(-8px);  /* Eleva la tarjeta 8 píxeles */
+    transform: translateY(-8px);  
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.18);
 }
 
@@ -141,11 +152,10 @@ body {
 .card-image-wrapper img {
     width: 100%;
     height: 100%;
-    object-fit: cover;            /* Ajusta la imagen sin deformarla */
+    object-fit: cover;            
     transition: transform 0.4s ease;
 }
 
-/* Amplía levemente la imagen al hacer hover sobre la card */
 .card:hover .card-image-wrapper img {
     transform: scale(1.05);
 }
@@ -156,7 +166,7 @@ body {
 
 .card-content h3 {
     font-size: 1.4rem;
-    color: #1a252f;
+    color: #2c3e50;
     margin-bottom: 10px;
 }
 
@@ -164,13 +174,14 @@ body {
     font-size: 0.95rem;
     color: #666666;
 }
+
 /* ===================================================
    6. CABECERA DE CURSO (LOGO IZQ - TÍTULO DER)
    =================================================== */
 .course-header {
     display: flex;
-    align-items: center;          /* Centra verticalmente logo y título */
-    gap: 25px;                    /* Espacio entre el logo y el título */
+    align-items: center;          
+    gap: 25px;                    
     background-color: #ffffff;
     padding: 30px;
     border-radius: 12px;
@@ -181,18 +192,18 @@ body {
 .course-header-logo img {
     width: 90px;
     height: 90px;
-    border-radius: 50%;           /* Hace la imagen redonda */
+    border-radius: 50%;           
     object-fit: cover;
-    border: 3px solid #00bcd4;
+    border: 3px solid #6aa79f;
 }
 
 .course-header-title {
-    text-align: left;             /* Alinea el texto a la derecha visualmente respecto al logo */
+    text-align: left;            
 }
 
 .course-header-title h1 {
     font-size: 2.2rem;
-    color: #1a252f;
+    color: #2c3e50;
     margin-bottom: 5px;
 }
 
@@ -206,7 +217,6 @@ body {
    =================================================== */
 .course-grid {
     display: grid;
-    /* Divide la pantalla en 2 columnas de igual tamaño */
     grid-template-columns: 1fr 1fr;
     gap: 30px;
 }
@@ -222,13 +232,12 @@ body {
 
 .card-header-title {
     font-size: 1.5rem;
-    color: #1a252f;
-    border-bottom: 2px solid #00bcd4;
+    color: #2c3e50;
+    border-bottom: 2px solid #6aa79f;
     padding-bottom: 10px;
     margin-bottom: 20px;
 }
 
-/* Lista del Temario */
 .temario-list {
     list-style: none;
 }
@@ -244,7 +253,6 @@ body {
     border-bottom: none;
 }
 
-/* Formulario de Postulación */
 .postulacion-info {
     margin-bottom: 15px;
     color: #555555;
@@ -274,12 +282,12 @@ body {
 }
 
 .form-group input:focus {
-    border-color: #00bcd4;
+    border-color: #6aa79f;
 }
 
 .btn-postular {
     width: 100%;
-    background-color: #00bcd4;
+    background-color: #6aa79f; /* Color institucional aplicado */
     color: #ffffff;
     border: none;
     padding: 12px;
@@ -291,27 +299,24 @@ body {
 }
 
 .btn-postular:hover {
-    background-color: #008ba3;
+    background-color: #528a82;
 }
 
-/* Adaptabilidad a pantallas pequeñas (móviles) */
 @media (max-width: 768px) {
     .course-grid {
-        grid-template-columns: 1fr; /* Pasa a 1 columna en celulares */
+        grid-template-columns: 1fr;
     }
-    
     .course-header {
         flex-direction: column;
         text-align: center;
     }
-    
     .course-header-title {
         text-align: center;
     }
 }
-/* ===================================================
-   8. SECCIÓN Y CARD DE CONTACTO
-   =================================================== */
+
+   /* 8 . SECCIÓN Y CARD DE CONTACTO */
+
 .contacto-section {
     margin-top: 50px;
     margin-bottom: 40px;
@@ -395,9 +400,8 @@ body {
 }
 .gmail{
     width: 50px;
-}
-/* ===================================================
-   9. SECCIÓN DE HISTORIA E INFORMACIÓN INSTITUCIONAL
+} 
+  /* 9. SECCIÓN DE HISTORIA E INFORMACIÓN INSTITUCIONAL
    =================================================== */
 .historia-narrativa {
     margin: 50px auto;
@@ -407,7 +411,7 @@ body {
 .historia-narrativa h2 {
     text-align: center;
     font-size: 2rem;
-    color: #1a252f;
+    color: #2c3e50;
     margin-bottom: 40px;
     position: relative;
 }
@@ -417,12 +421,11 @@ body {
     display: block;
     width: 60px;
     height: 4px;
-    background-color: #00bcd4;
+    background-color: #6aa79f;
     margin: 8px auto 0 auto;
     border-radius: 2px;
 }
 
-/* Filas individuales de texto e imagen */
 .historia-row {
     display: flex;
     align-items: center;
@@ -434,7 +437,6 @@ body {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
-/* Alterna la posición: imagen a la izquierda y texto a la derecha */
 .historia-row.reverse {
     flex-direction: row-reverse;
 }
@@ -445,9 +447,9 @@ body {
 
 .historia-text h3 {
     font-size: 1.35rem;
-    color: #1a252f;
+    color: #2c3e50;
     margin-bottom: 12px;
-    border-left: 4px solid #00bcd4;
+    border-left: 4px solid #6aa79f;
     padding-left: 10px;
 }
 
@@ -455,12 +457,21 @@ body {
     color: #555555;
     font-size: 1rem;
     line-height: 1.6;
-    font-style: italic; /* Indica que el contenido es personalizable */
 }
 
-.historia-img {flex: 1;
+.proyectos-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    color: #555555;
+}
+
+.proyectos-list li {
+    margin-bottom: 6px;
+}
+
+.historia-img {
+    flex: 1;
     max-width: 380px;
-    
 }
 
 .historia-img img {
@@ -471,7 +482,6 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Fila final para apoyos y subvenciones */
 .historia-row-extra {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -484,44 +494,50 @@ body {
 
 .historia-item-text h3 {
     font-size: 1.3rem;
-    color: #1a252f;
-    margin-bottom: 10px;
-    border-left: 4px solid #00bcd4;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    border-left: 4px solid #6aa79f;
     padding-left: 10px;
 }
 
 .historia-item-text.subvencion h3 {
-    border-left-color: #27ae60; /* Color verde institucional para subvenciones */
+    border-left-color: #6aa79f;
 }
 
 .historia-item-text p {
     color: #555555;
     font-size: 0.95rem;
-    font-style: italic;
+    margin-top: 10px;
+    margin-bottom: 5px;
 }
 
-/* Diseño responsivo para pantallas móviles */
+.historia-item-text img {
+    max-width: 120px;
+    height: auto;
+    display: block;
+    margin: 8px 0 15px 0;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
 @media (max-width: 768px) {
     .historia-row, .historia-row.reverse {
         flex-direction: column;
         gap: 20px;
         padding: 20px;
     }
-    
     .historia-img {
         max-width: 100%;
         width: 100%;
     }
-    
     .historia-row-extra {
         grid-template-columns: 1fr;
         padding: 20px;
     }
-
-
 }
+
 /* ===================================================
-   11. SECCIÓN DE INTEGRANTES (ALTERNANCIA DE POSICIÓN)
+   10. SECCIÓN DE INTEGRANTES
    =================================================== */
 .integrantes-section {
     margin: 50px auto;
@@ -531,8 +547,9 @@ body {
 .integrantes-section h2 {
     text-align: center;
     font-size: 2rem;
-    color: #1a252f;
+    color: #2c3e50;
     margin-bottom: 40px;
+    margin-top: 30px;
     position: relative;
 }
 
@@ -541,12 +558,11 @@ body {
     display: block;
     width: 60px;
     height: 4px;
-    background-color: #00bcd4;
+    background-color: #6aa79f;
     margin: 8px auto 0 auto;
     border-radius: 2px;
 }
 
-/* Fila base: Imagen izquierda, Texto derecha */
 .integrante-row {
     display: flex;
     align-items: center;
@@ -563,14 +579,12 @@ body {
     transform: translateY(-3px);
 }
 
-/* CLASE INVERTIDA: Cambia el orden, colocando la imagen a la derecha y texto a la izquierda */
 .integrante-row.reverse {
     flex-direction: row-reverse;
 }
 
-/* Contenedor de la imagen de perfil */
 .integrante-img {
-    flex: 0 0 160px; /* Ancho fijo para mantener la proporción de la foto */
+    flex: 0 0 160px;
     height: 160px;
 }
 
@@ -578,19 +592,18 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 50%;          /* Hace la foto circular */
-    border: 4px solid #00bcd4;   /* Borde institucional */
+    border-radius: 50%;          
+    border: 4px solid #6aa79f;   
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Contenedor de la información del integrante */
 .integrante-info {
     flex: 1;
 }
 
 .integrante-info h3 {
     font-size: 1.35rem;
-    color: #1a252f;
+    color: #2c3e50;
     margin-bottom: 8px;
 }
 
@@ -601,26 +614,13 @@ body {
     line-height: 1.5;
 }
 
-/* Adaptabilidad a dispositivos móviles */
 @media (max-width: 768px) {
     .integrante-row, .integrante-row.reverse {
-        flex-direction: column; /* En celulares se apilan verticalmente */
+        flex-direction: column;
         text-align: center;
         padding: 20px;
     }
-
     .integrante-img {
         margin: 0 auto 15px auto;
     }
-}
-.unicef{
-    width: 1px;
-    height: 1spx;
-    border-radius: 5%;
-
-}
-.cbasc{
-    width: 10px;
-    height: 10px;
-    border-radius: 5%;
 }
